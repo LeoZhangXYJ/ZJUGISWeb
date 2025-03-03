@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const lat = selectedCity.latitude;
         const lon = selectedCity.longitude;
-        const apiKey = 'd57f9db3e1f698c12e4a740e77f32e79';
+        const apiKey = 'YOUR-OpenWeatherAPI'; //输入你的OpenWeather的API
         const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}&lang=zh_cn`;
 
         axios.get(url)
