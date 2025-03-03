@@ -1,0 +1,65 @@
+<!--基于hw1案例代码改动-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Widget</title>
+  <!-- 使用link标签链接外部css文件 -->
+  <link rel="stylesheet" href="index.css" />
+  <script src="index.js" defer></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/axios/1.3.4/axios.js"></script>
+</head>
+
+<body>
+  <!--初始开关-->
+  <button id="on-off">关闭实时天气面板</button> 
+  <!--实时天气面板整体-->
+  <div id="weather-container">
+    <!--标题-->
+    <h3 id="weather-title">实时天气</h3>
+
+    <!--选择框-->
+    <h5 class="weather-subtitle">选择城市</h5>
+    <select id="weather-city-select">
+      <option value="杭州">杭州</option>
+      <option value="宁波">宁波</option>
+      <option value="温州">温州</option>
+      <option value="嘉兴">嘉兴</option>
+      <option value="湖州">湖州</option>
+    </select>
+
+    <!-- 经纬度提示：使用表格实现（可用其他方式实现） -->
+    <table id="weather-lonlat-table">
+      <tr>
+        <th>经度:</th>
+        <td id="lon-td">120.19</td>
+        <td>&deg; ;</td> <!-- 特殊字符，度：&deg; -->
+        <th>纬度:</th>
+        <td id="lat-td">30.26</td>
+        <td>&deg; ;</td> <!-- 特殊字符，度：&deg; -->
+      </tr>
+    </table>
+    <!-- 按钮 -->
+    <button id="weather-button">生成天气小组件</button>
+
+    <!-- 天气小组件 -->
+    <div id="weather-component">
+      <!-- 使用<img />加载图片 -->
+      <img src="public/intial.png" alt="初始状态" />
+      <div class="left-text">
+        <h3>--&deg;C</h3>
+        <p><b>--</b></p>
+        <p>--</p>
+      </div>
+      <h1 class="right-text">
+        --
+      </h1>
+    </div>
+
+
+  </div>
+</body>
+
+</html>

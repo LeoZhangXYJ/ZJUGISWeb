@@ -1,0 +1,27 @@
+[
+  {
+    "city": "杭州",
+    "longitude": 120.19,
+    "latitude": 30.26
+  },
+  {
+    "city": "宁波",
+    "longitude": 121.56,
+    "latitude": 29.87
+  },
+  {
+    "city": "温州",
+    "longitude": 120.65,
+    "latitude": 28.00
+  },
+  {
+    "city": "嘉兴",
+    "longitude": 120.76,
+    "latitude": 30.77
+  },
+  {
+    "city": "湖州",
+    "longitude": 120.10,
+    "latitude": 30.86
+  }
+]

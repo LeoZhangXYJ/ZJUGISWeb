@@ -1,0 +1,162 @@
+/*基于hw1案例代码改动*/
+/* 工具面板 */
+#weather-container {
+  /* 设置宽高 */
+  width: 340px;
+  /* 使用absolute定位放置面板于右上角距边界32px处 */
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  /* 其他设置 */
+  padding: 30px;
+  border-radius: 12px;
+  background: #1f1f1f; /* 深色背景 */
+  box-shadow: 3px 4px 12px 1px rgba(0, 0, 0, 0.3);
+  color: #e6e6e6; /* 浅色文字 */
+}
+
+/* 大标题样式 */
+#weather-title {
+  margin: 0;
+  float: right; /* 使用float，让标题浮动到右侧空位。 */
+  font-size: 40px;
+}
+
+/* 子标题样式 */
+.weather-subtitle {
+  font-weight: 700;
+  margin: 10px 0 10px 0;
+  font-size: 16px;
+}
+
+/* 城市输入框的样式 */
+/* 一般情况 */
+#weather-city-select {
+  display: block;
+  margin-bottom: 15px;
+  padding: 1px 5px;
+  box-sizing: border-box;
+  width: 150px;
+  height: 32px;
+  border: 1px solid #404040;
+  border-radius: 6px;
+  background-color: #2d2d2d;
+  transition: all 0.15s; /* 让所有变化（如hover、active中的样式变化）有0.15s的过渡 */
+  color: #e6e6e6;
+}
+/* 鼠标悬浮情况 */
+#weather-city-select:hover {
+  border-color: #ff8408;
+}
+/* 选中情况 */
+#weather-city-select:focus {
+  border-color: #ff8408;
+  outline: none; /* 关闭选中时默认的黑色外边框 */
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+/* 经纬度提示：这里使用一个简单的表格实现，以保持格式规整 */
+#weather-lonlat-table {
+  margin-bottom: 15px;
+  color: #e6e6e6;
+}
+#weather-lonlat-table th {
+  padding-right: 8px;
+}
+#weather-lonlat-table td {
+  padding-right: 8px;
+}
+
+/* 按钮 */
+/* 一般情况 */
+#weather-button {
+  display: block;
+  box-sizing: border-box;
+  padding: 1px 15px;
+  width: 100%;
+  height: 32px;
+  border: 1px solid #404040;
+  border-radius: 6px;
+  box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
+  background-color: #2d2d2d;
+  cursor: pointer;
+  transition: all 0.15s;
+  color: #e6e6e6;
+  font-size: 14px;
+}
+/* 鼠标悬浮情况 */
+#weather-button:hover {
+  color: #ff8408;
+  border-color: #ff8408;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+/* 选中情况 */
+#weather-button:active {
+  color: #e97807;
+  border-color: #e97807;
+  transform: scale(0.95); /* 缩小按钮，制造按下的效果 */
+  box-shadow: 0 0 7px 4px rgba(24, 144, 255, 0.2);
+}
+
+/* 天气小组件：这一段中使用了多种选择器，你能看明白吗？ */
+#weather-component {
+  position: relative; /* 设置为relative布局，使得其内部absolute布局的元素能够以其为外框定位 */
+  margin: 30px 0 0 0;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 15px;
+  background-color: #ffffff24;
+}
+#weather-component img {
+  margin: 5px;
+  width: 65px; /* 在默认情况下图片宽高会等比例变化，故只用修改宽度便可完成缩放 */
+}
+#weather-component > .right-text {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+}
+#weather-component > .right-text h1 {
+  margin: 0;
+}
+#weather-component > .left-text {
+  position: absolute;
+  top: 15px;
+  left: 90px;
+}
+#weather-component > .left-text * {
+  margin: 0;
+}
+#weather-component > .left-text h3 {
+  margin: 0;
+  font-size: 24px;
+}
+#weather-component > .left-text p {
+  margin: 0;
+  font-size: 12px;
+}
+
+/*开关美化*/
+#on-off {
+  position: absolute;
+  right: 300px;
+  top: 0;
+  border-radius: 6px;
+  background: #1f1f1f; /* 深色背景 */
+  box-shadow: 3px 4px 12px 1px rgba(0, 0, 0, 0.3);
+  color: #e6e6e6; /* 浅色文字 */
+}
+
+#on-off:hover {
+  color: #ff8408;
+  border-color: #ff8408;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+/* 选中情况 */
+#on-off:active {
+  color: #e97807;
+  border-color: #e97807;
+  transform: scale(0.95); /* 缩小按钮，制造按下的效果 */
+  box-shadow: 0 0 7px 4px rgba(24, 144, 255, 0.2);
+}

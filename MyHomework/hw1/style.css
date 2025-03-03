@@ -1,0 +1,158 @@
+body {
+    font-family: "JetBrains Mono", "LXGW WenKai", sans-serif; /* 英文字体 Jetbrain Mono，中文字体 霞鹜文楷 */
+}
+
+h1 {
+    color: aliceblue;
+    text-align: center;
+    font-size: 42px !important;
+}
+
+h2 {
+    color: aliceblue;
+    font-size: 100;
+    margin-top: 28px;
+    margin-left: 20px; /* 添加左侧间隔 */
+}
+
+select {
+    margin-left: 20px;
+    width: 80%; /* 设置宽度 */
+    padding: 10px; /* 内边距 */
+    border: 1px solid #8f8b8b; /* 边框 */
+    border-radius: 5px; /* 圆角 */
+    background-color: #242222; /* 背景颜色 */
+    color: aliceblue; /* 字体颜色 */
+    font-size: 16px; /* 字体大小 */
+    appearance: none; /* 移除默认样式 */
+    -webkit-appearance: none; /* 移除默认样式（WebKit浏览器） */
+    -moz-appearance: none; /* 移除默认样式（Firefox） */
+    transition: background-color 0.3s ease; /* 添加过渡效果 */
+}
+
+select:hover {
+    background-color: #333; /* 鼠标悬停时的背景颜色 */
+    border: 1px solid #53330b; /* 悬停时的边框颜色 */
+}
+
+select:focus {
+    background-color: #444; /* 选中时的背景颜色 */
+    border: 1px solid #53330b; /* 选中时的边框颜色 */
+    outline: none; /* 移除默认的选中边框 */
+}
+
+p {
+    margin-left: 20px;
+    color: aliceblue;
+}
+
+
+.wrapper {
+    background-image: linear-gradient(to bottom, rgb(21, 20, 20), rgb(50, 50, 50));
+    width: 400px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 50px 50px 200px;
+    grid-gap: 10px;
+    border-radius: 20px; /* 圆角化 */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.weather {
+  grid-column: 2;
+  grid-row: 1;
+  margin-right: 20px;
+}
+
+.city {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.location {
+  grid-column: -1 / 1;
+  grid-row: 2;
+}
+
+.button {
+    grid-column: -1 / 1;
+    grid-row: 3;
+    text-align: center;
+}
+
+.zujian {
+    grid-column: -1 / 1;
+    grid-row: 4;
+    background-color: #464343; /* 设置背景颜色 */
+    margin: 20px 20px 60px 20px; /* 四周间隔20px */
+    padding: 10px; /* 内边距 */
+    border-radius: 10px; /* 圆角 */
+    color: aliceblue; /* 字体颜色 */
+    display: flex;
+}
+
+button {
+    background-color: #363736; /* 背景颜色 */
+    border: none; /* 无边框 */
+    color: white; /* 字体颜色 */
+    padding: 15px 32px; /* 内边距 */
+    text-align: center; /* 文本居中 */
+    text-decoration: none; /* 无下划线 */
+    display: inline-block; /* 内联块元素 */
+    font-size: 16px; /* 字体大小 */
+    margin: 4px 20px; /* 外边距 */
+    cursor: pointer; /* 鼠标指针 */
+    border-radius: 12px; /* 圆角 */
+    transition-duration: 0.4s; /* 过渡时间 */
+    width: calc(100% - 40px); /* 设置宽度为离左右各20px */
+}
+
+button:hover {
+    background-color: #363736; /* 背景颜色 */
+    color: rgb(198, 88, 25); /* 字体颜色 */
+    border: 2px solid #53330b; /* 边框 */
+}
+
+#weather-logo {
+    width: 100px; /* 设置宽度 */
+    height: auto; 
+    border-radius: 10px; /* 圆角 */ 
+    display: block; /* 块级元素 */
+}
+
+#weather-detail {
+    display: flex; /* 使用Flexbox布局 */
+    flex-direction: column; /* 垂直排列 */
+    justify-content: center; /* 垂直居中 */
+    align-items: flex-start; /* 水平左对齐 */
+    height: 100%; /* 占据父容器的高度 */
+}
+
+#weather-detail p {
+    margin: 5px 0 5px 10px; 
+}
+
+#temperature {
+    font-size: 24px; 
+    font-weight: bolder; 
+}
+
+#weather-en {
+    font-size: 16px; 
+    font-weight: bold; 
+}
+
+#weather-cn {
+    font-size: 16px; 
+}
+
+#weather-city {
+    position: absolute; /* 绝对定位 */
+    right: 24px; 
+    font-size: 64px; 
+    color: white; 
+    top: 50%; /* 垂直居中 */
+}
